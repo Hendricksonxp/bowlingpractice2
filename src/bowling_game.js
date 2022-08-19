@@ -1,4 +1,4 @@
-export class BowlingGame {
+class BowlingGame {
 
     constructor() {
     }
