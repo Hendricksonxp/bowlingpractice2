@@ -7,3 +7,5 @@ class BowlingGame {
         return 0;
     }
 }
+
+module.exports = BowlingGame
