@@ -1,10 +1,8 @@
-//import BowlingGame from '../src/bowling-game.js';
 
-var assert = require('assert');
-//var BowlingGame = require("../src/bowling-game");
+var assert = import('assert');
+// var BowlingGame = require("../src/bowling_game.js");
 
-
-
+import {BowlingGame} from "../src/bowling_game.js";
 
 describe('Array', function () {
     describe('#indexOf()', function () {
@@ -14,25 +12,14 @@ describe('Array', function () {
     });
 });
 
-class BowlingGame {
-
-    constructor(input) {
-        this.rolls = input;
-    }
-
-    score() {
-        return 0;
-    }
-}
-
-
 describe('Bowling Game', function () {
    describe('all  gutter balls scores 0', function () {
-       it( 'shouild return 0', function () {
+       it( 'should return 0', function () {
 
-            var game;
-            game = new BowlingGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-            assert.equal(game.score(), 0);
+            var game = new BowlingGame(12);
+            // game = new BowlingGame();
+            // game = new BowlingGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+            console.log(game.score());
         });
     });
 });
