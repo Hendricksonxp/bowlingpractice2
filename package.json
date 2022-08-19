@@ -6,6 +6,6 @@
   },
   "dependencies": {
     "@types/chai": "^4.3.3"
-  },
+  }
 
 }
