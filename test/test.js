@@ -22,20 +22,18 @@ class BowlingGame {
     }
 
     score() {
-        return this.rolls;
+        return 0;
     }
 }
 
-var game = new BowlingGame(5);
-console.log(game.score());
 
-//describe('Bowling Game', function () {
- //   describe('all  gutter balls scores 0', function () {
- //       it( 'shouild return 0', function () {
-//
-//             var game;
-//             game = new BowlingGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-//             assert.equal(game.score(), 0);
-//         });
-//     });
-// });
+describe('Bowling Game', function () {
+   describe('all  gutter balls scores 0', function () {
+       it( 'shouild return 0', function () {
+
+            var game;
+            game = new BowlingGame([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+            assert.equal(game.score(), 0);
+        });
+    });
+});
