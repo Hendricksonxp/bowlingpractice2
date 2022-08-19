@@ -1,6 +1,11 @@
 //import BowlingGame from '../src/bowling-game.js';
 
 var assert = require('assert');
+//var BowlingGame = require("../src/bowling-game");
+
+
+
+
 
 describe('Array', function () {
     describe('#indexOf()', function () {
@@ -9,6 +14,20 @@ describe('Array', function () {
         });
     });
 });
+
+class BowlingGame {
+
+    constructor(input) {
+        this.rolls = input;
+    }
+
+    score() {
+        return this.rolls;
+    }
+}
+
+var game = new BowlingGame(5);
+console.log(game.score());
 
 //describe('Bowling Game', function () {
  //   describe('all  gutter balls scores 0', function () {
