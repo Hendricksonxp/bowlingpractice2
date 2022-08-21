@@ -1,11 +1,16 @@
 class BowlingGame {
-
-    constructor() {
+    constructor(input) {
+        this.rolls = input;
     }
 
     score() {
-        return 0;
+
+        var sum = 0;
+        sum = this.rolls.reduce(function (previousValue, currentValue) {
+            return previousValue + currentValue;
+            return sum;
+        })
+        return sum;
     }
 }
-
 module.exports = BowlingGame

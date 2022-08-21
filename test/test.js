@@ -19,4 +19,13 @@ describe('Bowling Game', function () {
             assert.equal(game.score(), 0);
         });
     });
+
+    describe('all  3 balls scores 60', function () {
+        it('should return 0', function () {
+
+            let game;
+            game = new BowlingGame([3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3]);
+            assert.equal(game.score(), 60);
+        });
+    });
 });
