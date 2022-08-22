@@ -28,4 +28,12 @@ describe('Bowling Game', function () {
             assert.equal(game.score(), 60);
         });
     });
+    describe('only some frames score', function () {
+        it('should return 12', function () {
+
+            let game;
+            game = new BowlingGame([3,3, 0,0, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            assert.equal(game.score(), 12);
+        });
+    });
 });
