@@ -11,15 +11,15 @@ class BowlingGame {
             let secondRoll = this.rolls[rollTracker + 1];
             let nextRoll = this.rolls[rollTracker + 2];
             if (firstRoll === 10) {
-                sum = sum + 10 + secondRoll + nextRoll;
+                sum += 10 + secondRoll + nextRoll;
                 rollTracker += 1;
             }
             else if (firstRoll + secondRoll === 10) {
-                sum = sum + 10 + nextRoll;
+                sum += 10 + nextRoll;
                 rollTracker += 2;
             }
             else {
-                sum = sum + firstRoll + secondRoll
+                sum += firstRoll + secondRoll
                 rollTracker += 2;
             }
         }
