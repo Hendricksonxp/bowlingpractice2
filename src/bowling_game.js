@@ -6,7 +6,7 @@ class BowlingGame {
     score() {
         let sum = 0;
         let rollTracker = 0
-        for (let frame = 0; frame < 10; frame++) {
+        for (let frame = 1; frame <= 10; frame++) {
             let firstRoll = this.rolls[rollTracker]
             let secondRoll = this.rolls[rollTracker + 1];
             let nextRoll = this.rolls[rollTracker + 2];
