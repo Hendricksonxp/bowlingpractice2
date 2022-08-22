@@ -34,11 +34,35 @@ describe('Bowling Game', function () {
             assert.equal(game.score(), 18);
         });
     });
-    describe('Spare', function () {
+    describe('spare', function () {
         it('should add the next ball', function () {
             let game;
             game = new BowlingGame([6,4, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
             assert.equal(game.score(), 12);
+        });
+        it('should add the next ball even when not in the first frame', function () {
+            let game;
+            game = new BowlingGame([0,0, 6,4, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            assert.equal(game.score(), 12);
+        });
+    });
+    describe('strike', function () {
+        it('should add the next two balls', function () {
+            let game;
+            game = new BowlingGame([10, 1,4, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            assert.equal(game.score(), 20);
+        });
+        it('should add the next two balls in any frame', function () {
+            let game;
+            game = new BowlingGame([0,0, 0,0, 10, 1,4, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            assert.equal(game.score(), 20);
+        });
+    });
+    describe('perfect game', function () {
+        it('should add the next two balls for all frames', function () {
+            let game;
+            game = new BowlingGame([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]);
+            assert.equal(game.score(), 300);
         });
     });
 });
