@@ -47,7 +47,7 @@ describe('Bowling Game', function () {
         });
     });
     describe('strike', function () {
-        it('should add the next two balls', function () {
+        it('should add the next two balls and return 20', function () {
             let game;
             game = new BowlingGame([10, 1,4, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
             assert.equal(game.score(), 20);
@@ -59,7 +59,7 @@ describe('Bowling Game', function () {
         });
     });
     describe('perfect game', function () {
-        it('should add the next two balls for all frames', function () {
+        it('should return 300', function () {
             let game;
             game = new BowlingGame([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]);
             assert.equal(game.score(), 300);

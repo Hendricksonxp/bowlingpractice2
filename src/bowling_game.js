@@ -6,19 +6,20 @@ class BowlingGame {
     score() {
         let sum = 0;
         let rollTracker = 0
-        let currentRoll = 0;
         for (let frame = 0; frame < 10; frame++) {
-            currentRoll = this.rolls[rollTracker]
+            let currentRoll = this.rolls[rollTracker]
+            let nextRoll = this.rolls[rollTracker + 1];
+            let followingNextRoll = this.rolls[rollTracker + 2];
             if (currentRoll === 10) {
-                sum = sum + 10 + this.rolls[rollTracker + 1] + this.rolls[rollTracker + 2];
+                sum = sum + 10 + nextRoll + followingNextRoll;
                 rollTracker += 1;
             }
-            else if (currentRoll + this.rolls[rollTracker + 1] === 10) {
-                sum = sum + 10 + this.rolls[rollTracker + 2];
+            else if (currentRoll + nextRoll === 10) {
+                sum = sum + 10 + followingNextRoll;
                 rollTracker = rollTracker + 2;
             }
             else {
-                sum = sum + currentRoll + this.rolls[rollTracker + 1]
+                sum = sum + currentRoll + nextRoll
                 rollTracker += 2;
             }
         }
