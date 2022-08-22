@@ -5,7 +5,7 @@ class BowlingGame {
 
     score() {
 
-        var sum = 0;
+        let sum;
         sum = this.rolls.reduce(function (previousValue, currentValue) {
             return previousValue + currentValue;
         })
