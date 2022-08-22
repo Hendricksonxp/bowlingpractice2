@@ -30,7 +30,14 @@ describe('Bowling Game', function () {
         it('should return 12', function () {
 
             let game;
-            game = new BowlingGame([3,3, 0,0, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            game = new BowlingGame([3,3, 0,0, 3,3, 0,0, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0]);
+            assert.equal(game.score(), 18);
+        });
+    });
+    describe('Spare', function () {
+        it('should add the next ball', function () {
+            let game;
+            game = new BowlingGame([6,4, 1,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0]);
             assert.equal(game.score(), 12);
         });
     });
