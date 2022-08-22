@@ -11,7 +11,7 @@ describe('Array', function () {
 
 
 describe('Bowling Game', function () {
-    describe('all  gutter balls scores 0', function () {
+    describe('all  gutter balls', function () {
         it('should return 0', function () {
 
             let game;
@@ -20,15 +20,13 @@ describe('Bowling Game', function () {
         });
     });
 
-    describe('all  3 balls scores 60', function () {
-        it('should return 0', function () {
+    describe('open frames', function () {
+        it('should return 60', function () {
 
             let game;
             game = new BowlingGame([3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3, 3,3]);
             assert.equal(game.score(), 60);
         });
-    });
-    describe('only some frames score', function () {
         it('should return 12', function () {
 
             let game;
